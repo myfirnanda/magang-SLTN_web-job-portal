@@ -1,0 +1,533 @@
+/* =========================
+        CSS  RESET
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* =========================
+        GENERAL
+========================= */
+
+.bg {
+  background: #e0dff1;
+}
+
+.xtra-p {
+  padding: 60px 0 40px;
+  overflow-x: hidden;
+}
+
+.xtra-pt {
+  padding-top: 10rem;
+}
+
+.w-35 {
+  width: 35%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.h-5rem {
+  height: 5rem;
+}
+
+.text-primary {
+  color: #655DBB !important;
+}
+
+.p-xtra {
+  padding: 2rem 0 4rem;
+}
+
+.my-xtra {
+  margin: 3rem 0 10rem;
+}
+
+.mx-xtra {
+  margin: 0 8rem;
+}
+
+.bdrs-xtra {
+  border-radius: 20px;
+}
+
+/* =========================
+        HEADER
+========================= */
+
+.nav-links {
+  margin-top: 1.2%;
+  z-index: 999;
+}
+
+header nav .nav-links .active {
+  border-bottom: 2px solid #655dbb;
+  color: #655dbb !important;
+}
+
+.nav-links a:hover {
+  color: #655dbb !important;
+}
+
+.link-hover:hover {
+  color: text-primary !important;
+}
+
+/* =========================
+JUMBOTRON
+========================= */
+
+header .jumbotron {
+  letter-spacing: 1px;
+}
+
+.jumbotron .img-box img {
+  left: 5rem;
+}
+
+/* =========================
+        CATEGORIES
+========================= */
+
+.categories {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+}
+
+/* =========================
+        STEP-GUIDE
+========================= */
+
+.step-guide ol {
+  list-style: none;
+  counter-reset: item;
+  position: relative;
+  right: 2rem;
+}
+
+.step-guide li {
+  counter-increment: item;
+  margin-bottom: 5px;
+}
+
+.step-guide li:before {
+  margin-right: 10px;
+  content: counter(item);
+  /* content: ; */
+  background: #655dbb;
+  border-radius: 100%;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+.step-guide li h5 {
+  display: inline-block;
+}
+
+.step-guide li p {
+  margin-left: 3rem;
+}
+
+/* =========================
+        JOB LIST
+========================= */
+
+.company {
+  gap: 0.8rem;
+}
+
+.desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.company .company-desc > * {
+  margin-bottom: unset;
+}
+
+.company .img-box {
+  padding: 0.5rem;
+}
+
+.job-list .content h4 {
+  margin-top: 1rem;
+}
+
+.job-list .content p {
+  color: #bbb;
+}
+
+#job-list .hover-primary:hover {
+  background-color: #655dbb;
+  color: #ffffff !important;
+}
+
+#bg-fulltime {
+  background: #E4DCFF !important;
+  color: #655DBB !important;
+}
+
+#bg-parttime {
+  background: #FFFF86;
+  color: #ffc107;
+}
+
+#bg-magang {
+  background: #98FFD3;
+  color: #198754 !important;
+}
+
+#bg-freelance {
+  background: #FFB4C4;
+  color: #dc3545;
+}
+
+
+
+/* =========================
+        FEEDBACK
+========================= */
+
+.feedback {
+  margin: 32px 0 120px 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 350px;
+}
+
+.swiper-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide p:before {
+  /* content: '"'; */
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.feedback .swiper-pagination-bullet-active {
+	background: #655DBB;
+}
+
+.feedback .swiper-button-next::after,
+.feedback .swiper-button-prev::after {
+	display: none;
+}
+
+.feedback .swiper-button-next,
+.feedback .swiper-button-prev {
+	font-size: 5rem;
+	color: #655DBB;
+}
+
+/* =========================
+        NEWSLETTER
+========================= */
+
+.newsletter .newsletter-container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.newsletter .bdrs {
+  border-radius: 20px;
+}
+
+.newsletter .xtra-bdrs {
+  border-radius: 2rem;
+}
+
+.newsletter input {
+  margin-left: 10px;
+}
+
+/* =========================
+            FOOTER
+========================= */
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.footer-item:first-child {
+  margin-right: 3rem;
+}
+
+.footer-item:first-child .to-top {
+  position: relative;
+  bottom: .5rem;
+}
+
+.footerLink {
+  opacity: 0.8;
+  position: relative;
+  top: .5rem
+}
+
+.footerLink:hover {
+  opacity: 1;
+}
+
+.icon {
+  color: #655dbb;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.4s;
+}
+
+.icon:hover {
+  color: #655dbb;
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.single-page .bg-img {
+  opacity: 0.33;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.about-bg {
+  background-image: -webkit-repeating-radial-gradient(center center, #655dbb, #655dbb 1px, transparent 1px, transparent 100%);
+  background-image: -moz-repeating-radial-gradient(center center, #655dbb, #655dbb 1px, transparent 1px, transparent 100%);
+  background-image: -ms-repeating-radial-gradient(center center, #655dbb, #655dbb 1px, transparent 1px, transparent 100%);
+  background-image: -o-repeating-radial-gradient(center center, #655dbb, #655dbb 1px, transparent 1px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, #655dbb, #655dbb 1px, transparent 1px, transparent 100%);
+  background-size: 5px 5px;
+}
+
+/* =========================
+          Sign Up
+========================= */
+
+.template-signup .wrapper{
+  background: #ececec;
+  padding: 0 20px 0 20px;
+}
+.template-signup .main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.template-signup .row{
+  width: 900px;
+  height: 550px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
+}
+.template-signup .side-image{
+  background-image: url("images/img1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 10px 0 0 10px;
+}
+.template-signup img{
+  width: 35px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.template-signup .text{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+.template-signup .text p{
+  color: #111;
+  font-size: 18px;
+  font-weight: 600;
+}
+.template-signup i{
+  font-weight: 400;
+  font-size: 15px;
+}
+.template-signup .right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.template-signup .input-box{
+  width: 330px;
+  box-sizing: border-box;
+}
+.template-signup .input-box header{
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 45px;
+}
+.template-signup .input-field{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 10px 0 10px;
+}
+.template-signup .input{
+  height: 45px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  outline: none;
+  margin-bottom: 20px;
+  color: #40414a;
+}
+.template-signup .input-box .input-field label{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  pointer-events: none;
+  transition: .5s;
+}
+.template-signup .input-field .input:focus ~ label{
+  top: -10px;
+  font-size: 13px;
+}
+.template-signup .input-field .input:valid ~ label{
+  top: -10px;
+  font-size: 13px;
+  color: #5d5076;
+}
+.template-signup .input-field .input:focus, .input-field .input:valid{
+  border-bottom: 1px solid #743ae1;
+}
+.template-signup .submit{
+  border: none;
+  outline: none;
+  height: 45px;
+  background: #ececec;
+  border-radius: 5px;
+  transition: .4s;
+}
+.template-signup .submit:hover{
+  background: #655dbb;
+  color: #fff;
+}
+.template-signup .signin{
+  text-align: center;
+  font-size: small;
+  margin-top: 25px;
+}
+.template-signup span a{
+  text-decoration: none;
+  font-weight: 700;
+  color: #000;
+  transition: .5s;
+}
+.template-signup span a:hover{
+  text-decoration: underline;
+  color: #000;
+}
+@media only screen and (max-width: 768px){
+  .template-signup .side-image{
+      border-radius: 10px 10px 0 0;
+  }
+  .template-signup img{
+      width: 35px;
+      position: absolute;
+      top: 20px;
+      left: 47%;
+  }
+  .template-signup .text{
+      position: absolute;
+      top: 70%;
+      text-align: center;
+  }
+  .template-signup .text p,i{
+      font-size: 17px;
+  }
+  .template-signup .row{
+      max-width: 420px;
+      width: 100%;
+  }
+}
+
+.template-signup .img{
+  width: 35px;
+      position: absolute;
+      top: 65px;
+      left: 47%;
+}
+
+/* =========================
+            Tabs
+========================= */
+
+.tabs li a {
+  color: rgba(108, 117, 125);
+}
+
+.tabs li.active a {
+  background: #655DBB;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+/* =========================
+            Page
+========================= */
+
+.single-page .banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.job-banner-text {
+  position: relative; top: 5rem;
+}
+
+/* =========================
+        Job Archive
+========================= */
+
+.job-archive .job-item  {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
