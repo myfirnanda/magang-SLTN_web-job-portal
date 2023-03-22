@@ -2,13 +2,15 @@
 $homepageJobs = new WP_Query(array(
     "posts_per_page" => 8,
     "post_type" => "job",
-    "orederby" => "rand",
-    'seed' => rand()
+    'meta_key' => 'job_date',
+    'orderby' => 'meta_value',
+    'order' => 'DESC',
 )); 
 ?>
 
 <?php get_header(); ?>
 
+<!-- ----- Jumbotron ----- -->
 <section class="jumbotron w-100 vh-100 z-10">
     <div class="container">
         <div class="row d-flex align-items-center vh-100">
@@ -27,7 +29,9 @@ $homepageJobs = new WP_Query(array(
         </div>
     </div>
 </section>
+<!-- ----- End Jumbotron ----- -->
 
+<!-- ----- Categories ----- -->
 <section class="categories xtra-p bg" id="categories">
     <div class="container">
         <h2 class="text-dark text-center fw-bold mb-5 h1">Telusuri <span class="text-primary">Pekerjaan</span><br>Berdasarkan Kategori</h2>
@@ -90,7 +94,9 @@ $homepageJobs = new WP_Query(array(
             </div>
         </div>
 </section>
+<!-- ----- End Categories ----- -->
 
+<!-- ----- About ----- -->
 <section class="about container-xxl py-5">
     <div class="container">
         <div class="row g-5 align-items-center">
@@ -121,7 +127,9 @@ $homepageJobs = new WP_Query(array(
         </div>
     </div>
 </section>
+<!-- ----- End About ----- -->
 
+<!-- ----- Step Guide ----- -->
 <section class="step-guide" id="step-guide">
     <div class="container">
         <div class="row d-flex align-items-center">
@@ -158,7 +166,9 @@ $homepageJobs = new WP_Query(array(
         </div>
     </div>
 </section>
+<!-- ----- End Step Guide ----- -->
 
+<!-- ----- Job list ----- -->
 <section class="job-list xtra-p" id="job-list">
     <div class="container">
         <div class="py-3 text-center">
@@ -180,7 +190,7 @@ $homepageJobs = new WP_Query(array(
                             <?php endif; ?>
                             </div>
                             <div class="company-desc">
-                                <h5 class="fw-bold"><a href="<?php the_permalink() ?>" class="text-dark text-decoration-none"><?php echo get_field('company_name'); ?></a></h5>
+                                <h6 class="fw-bold"><a href="<?php the_permalink() ?>" class="text-dark text-decoration-none"><?php echo get_field('company_name'); ?></a></h6>
                             </div>
                         </div>
                         <?php
@@ -222,57 +232,58 @@ $homepageJobs = new WP_Query(array(
         </div>
     </div>
 </section>
+<!-- ----- End Job List ----- -->
 
 <!-- feedback -->
 <section class="feedback mb-5" id="feedback">
-            <div class="container">
-                <div class="title text-center">
-                    <h3 class="fw-bold h1 fw-bold">Feedback <span class="text-primary">Positif </span><br>dari Para Pencari Kerja</h3>
-                    <p class="text-secondary">Baca testimonial dari para pengguna situs kami yang telah sukses menemukan pekerjaan impian mereka.</p>
+    <div class="container">
+        <div class="title text-center">
+            <h3 class="fw-bold h1 fw-bold">Feedback <span class="text-primary">Positif </span><br>dari Para Pencari Kerja</h3>
+            <p class="text-secondary">Baca testimonial dari para pengguna situs kami yang telah sukses menemukan pekerjaan impian mereka.</p>
+        </div>
+        <div class="swiper feedback-container my-xtra pb-3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="d-flex flex-column justify-content-center align-items-center gap-3 py-3 bdrs-xtra mx-xtra shadow-lg">
+                        <img src="<?= get_theme_file_uri('./assets/images/person/person1.jpg') ?>" alt="" width="100" height="100" class=" rounded-circle" style="object-fit: cover;">
+                        <div class="name w-70">
+                            <h4 class="text-center fw-bold">Fajar Putra</h4>
+                            <p class="text-center">Saya sangat senang bisa menemukan pekerjaan yang sesuai dengan keahlian saya di situs ini. Proses pencarian pekerjaan sangat mudah dan intuitif, serta terdapat banyak lowongan kerja berkualitas.</p>
+                            <span class="person-job d-flex justify-content-center text-secondary">AI Engineer</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="swiper feedback-container my-xtra pb-3">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="d-flex flex-column justify-content-center align-items-center gap-3 py-3 bdrs-xtra mx-xtra shadow-lg">
-                                <img src="<?= get_theme_file_uri('./assets/images/person/person1.jpg') ?>" alt="" width="100" height="100" class=" rounded-circle" style="object-fit: cover;">
-                                <div class="name w-70">
-                                    <h4 class="text-center fw-bold">Fajar Putra</h4>
-                                    <p class="text-center">Saya sangat senang bisa menemukan pekerjaan yang sesuai dengan keahlian saya di situs ini. Proses pencarian pekerjaan sangat mudah dan intuitif, serta terdapat banyak lowongan kerja berkualitas.</p>
-                                    <span class="person-job d-flex justify-content-center text-secondary">AI Engineer</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="d-flex flex-column justify-content-center align-items-center gap-3 py-3 bdrs-xtra mx-xtra shadow-lg">
-                                <img src="<?= get_theme_file_uri('./assets/images/person/person2.jpg') ?>" alt="" width="100" height="100" class=" rounded-circle" style="object-fit: cover;">
-                                <div class="name w-70">
-                                    <h4 class="text-center fw-bold">Ratna Sari Dewi</h4>
-                                    <p class="text-center">Saya berhasil mendapatkan pekerjaan yang saya inginkan setelah mencoba situs ini. Saya sangat merekomendasikan untuk semua orang yang sedang mencari pekerjaan.</p>
-                                    <span class="person-job d-flex justify-content-center text-secondary">UI/UX Designer</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="d-flex flex-column justify-content-center align-items-center gap-3 py-3 bdrs-xtra mx-xtra shadow-lg">
-                                <img src="<?= get_theme_file_uri('./assets/images/person/person3.jpg') ?>" alt="" width="100" height="100" class=" rounded-circle" style="object-fit: cover;">
-                                <div class="name w-70">
-                                    <h4 class="text-center fw-bold">Tiara Putri</h4>
-                                    <p class="text-center">Situs ini sangat membantu dalam mencari pekerjaan di bidang teknologi. Terdapat banyak lowongan kerja yang sesuai dengan keahlian saya, dan proses aplikasi sangat mudah dan efisien.</p>
-                                    <span class="person-job d-flex justify-content-center text-secondary">Data Analyst</span>
-                                </div>
-                            </div>
+                <div class="swiper-slide">
+                    <div class="d-flex flex-column justify-content-center align-items-center gap-3 py-3 bdrs-xtra mx-xtra shadow-lg">
+                        <img src="<?= get_theme_file_uri('./assets/images/person/person2.jpg') ?>" alt="" width="100" height="100" class=" rounded-circle" style="object-fit: cover;">
+                        <div class="name w-70">
+                            <h4 class="text-center fw-bold">Ratna Sari Dewi</h4>
+                            <p class="text-center">Saya berhasil mendapatkan pekerjaan yang saya inginkan setelah mencoba situs ini. Saya sangat merekomendasikan untuk semua orang yang sedang mencari pekerjaan.</p>
+                            <span class="person-job d-flex justify-content-center text-secondary">UI/UX Designer</span>
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev">
-                        <i class="uil uil-angle-left-b"></i>
-                    </div>
-                    <div class="swiper-button-next">
-                        <i class="uil uil-angle-right-b"></i>
+                </div>
+                <div class="swiper-slide">
+                    <div class="d-flex flex-column justify-content-center align-items-center gap-3 py-3 bdrs-xtra mx-xtra shadow-lg">
+                        <img src="<?= get_theme_file_uri('./assets/images/person/person3.jpg') ?>" alt="" width="100" height="100" class=" rounded-circle" style="object-fit: cover;">
+                        <div class="name w-70">
+                            <h4 class="text-center fw-bold">Tiara Putri</h4>
+                            <p class="text-center">Situs ini sangat membantu dalam mencari pekerjaan di bidang teknologi. Terdapat banyak lowongan kerja yang sesuai dengan keahlian saya, dan proses aplikasi sangat mudah dan efisien.</p>
+                            <span class="person-job d-flex justify-content-center text-secondary">Data Analyst</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev">
+                <i class="uil uil-angle-left-b"></i>
+            </div>
+            <div class="swiper-button-next">
+                <i class="uil uil-angle-right-b"></i>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- End Feedback -->
 
 <!-- Newsletter -->

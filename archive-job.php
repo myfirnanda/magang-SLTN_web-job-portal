@@ -72,10 +72,6 @@ $freelance = array(
 );
 $jobFreelance = new WP_Query($freelance);
 
-// Job salary 
-$number = get_field('job_salary');
-$formatted_number = number_format($number, 0, ',', '.');
-
 get_header() ?>
 
 <section class="job-archive">
@@ -113,6 +109,10 @@ get_header() ?>
                                     </a>    
                                     <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i><?= get_field('job_city') ?></span>
                                     <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i><?php echo get_field('job_type') ?></span>
+                                    <?php
+                                    $number = get_field('job_salary');
+                                    $formatted_number = number_format($number, 0, ',', '.');
+                                    ?>
                                     <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>Rp<?php echo $formatted_number; ?></span>
                                 </div>
                             </div>
@@ -150,6 +150,10 @@ get_header() ?>
                                     </a>    
                                     <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i><?= get_field('job_city') ?></span>
                                     <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i><?php echo get_field('job_type') ?></span>
+                                    <?php
+                                    $number = get_field('job_salary');
+                                    $formatted_number = number_format($number, 0, ',', '.');
+                                    ?>
                                     <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>Rp<?php echo $formatted_number; ?></span>
                                 </div>
                             </div>
@@ -187,6 +191,10 @@ get_header() ?>
                                     </a>    
                                     <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i><?= get_field('job_city') ?></span>
                                     <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i><?php echo get_field('job_type') ?></span>
+                                    <?php
+                                    $number = get_field('job_salary');
+                                    $formatted_number = number_format($number, 0, ',', '.');
+                                    ?>
                                     <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>Rp<?php echo $formatted_number; ?></span>
                                 </div>
                             </div>
@@ -224,6 +232,10 @@ get_header() ?>
                                     </a>    
                                     <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i><?= get_field('job_city') ?></span>
                                     <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i><?php echo get_field('job_type') ?></span>
+                                    <?php
+                                    $number = get_field('job_salary');
+                                    $formatted_number = number_format($number, 0, ',', '.');
+                                    ?>
                                     <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>Rp<?php echo $formatted_number; ?></span>
                                 </div>
                             </div>
