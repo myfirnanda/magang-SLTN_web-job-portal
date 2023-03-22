@@ -6,7 +6,7 @@ Template Name: Signup Template
 get_header(); ?>
 
 <div class="template-signup">
-    <div class="wrapper" style="background-image: url(<?= get_theme_file_uri('./assets/images/signup-bg.jpg') ?>); background-position: center; background-size: cover; background-repeat: no-repeat;">
+    <div class="wrapper" style="background-image: url(<?= get_theme_file_uri('./assets/images/page-bg.jpg') ?>); background-position: center; background-size: cover; background-repeat: no-repeat;">
         <div class="container main">
             <div class="row">
                 <div class="col-md-6 side-image" style="background-image: url(<?= get_theme_file_uri('./assets/images/signup-bg.jpg') ?>)">

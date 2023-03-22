@@ -1,4 +1,4 @@
-<header class="header w-100 z-100" id="header">
+<header class="header w-100 z-100 <?php echo is_singular('job') ? 'shadow-sm' : ''; ?>" id="header">
     <div class="nav-bar w-100 h-5rem <?php echo is_front_page() ? 'position-absolute' : ''; ?> container-fluid d-flex align-items-center">
         <div class="container">
             <nav class="d-flex justify-content-between align-items-center">
