@@ -28,4 +28,4 @@ Perlu diperhatikan bahwasannya untuk menggunakan theme-nya, Anda bisa melakukann
 ![jobs](https://user-images.githubusercontent.com/82860149/227062702-5ec6bdf4-472c-4b88-b268-8f17e582671b.png)
 
 ### Halaman Single Job
-![singular](https://user-images.githubusercontent.com/82860149/227062732-19b90dca-b85f-41a4-8e6c-5a637030993e.png)
+![single](https://user-images.githubusercontent.com/82860149/227072180-68b7583f-d425-4bb7-8171-2928b980d5ee.png)
