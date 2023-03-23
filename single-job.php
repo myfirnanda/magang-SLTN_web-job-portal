@@ -27,14 +27,14 @@ get_header()
                 </div>
 
                 <div class="mb-5">
-                    <h4 class="mb-3">Job description</h4>
+                    <h4 class="mb-3">Deskripsi Pekerjaan</h4>
                     <p><?php echo get_field('job_desc') ?></p>
-                    <h4 class="mb-3">Qualifications</h4>
+                    <h4 class="mb-3">Kualifikasi</h4>
                     <p><?php the_content() ?></p>
                 </div>
 
                 <div>
-                    <h4 class="mb-4">Apply For The Job</h4>
+                    <h4 class="mb-4">Lamar Pekerjaan</h4>
                     <form>
                         <div class="row g-3">
                             <div class="col-12 col-sm-6">
@@ -53,7 +53,7 @@ get_header()
                                 <textarea class="form-control" rows="5" placeholder="Coverletter"></textarea>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100" type="submit">Apply Now</button>
+                                <button class="btn btn-primary w-100" type="submit">Lamar Sekarang</button>
                             </div>
                         </div>
                     </form>
@@ -62,7 +62,7 @@ get_header()
 
             <div class="col-lg-4">
                 <div class="bg-light rounded p-5 mb-4 wow slideInUp" data-wow-delay="0.1s">
-                    <h4 class="mb-4">Job Summery</h4>
+                    <h4 class="mb-4">Ikhtisar Pekerjaan</h4>
                     <p><i class="fa fa-angle-right text-primary me-2"></i>Nama Perushaan: <?php echo get_field('company_name') ?></p>
                     <p><i class="fa fa-angle-right text-primary me-2"></i>Diposting pada: <?php $jobDate = new DateTime(get_field('job_date')); echo $jobDate->format('d') ?> <?php echo $jobDate->format('M') ?>, <?php echo $jobDate->format('Y') ?></p>
                     <p><i class="fa fa-angle-right text-primary me-2"></i>Tipe Pekerjaan: <?php echo get_field('job_type') ?></p>
