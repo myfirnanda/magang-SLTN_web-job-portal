@@ -9,7 +9,7 @@ Perlu diperhatikan bahwasannya untuk menggunakan theme-nya, Anda bisa melakukann
     * Pada dashboard wordpress, masuk ke halaman Tampilan -> Tema -> Tambah Baru -> Unggah Tema -> Choose File -> Install Now.
     * Apabila Anda sudah menginstall theme-nya, maka aktifkan theme tersebut.
 2. Instalasi Plugin ACF:
-    * Unduh plugin ACF melalui dashboard WordPress Anda.
+    * Unduh plugin Advanced Custom Fields by 'WP Engine' melalui dashboard WordPress Anda.
     * Aktifkan plugin dengan mengklik tombol Activate.
 3. Import Custom Field :
     * Setelah plugin ACF aktif, selanjutnya klik menu 'Bidang Kustom' di dashboard WordPress Anda, klik perkakas pada sub-menunya.
@@ -19,8 +19,7 @@ Perlu diperhatikan bahwasannya untuk menggunakan theme-nya, Anda bisa melakukann
     * Klik "Jobs" pada menu navigasi di samping kiri halaman dashboard wordpress Anda, kemudian klik "Tambah Baru" untuk menambah post job baru.
     * Isi judul post dan deskripsi pekerjaan.
     * Setelah semua bidang telah diisi, klik tombol "Publish" untuk menerbitkan post atau "Save Draft" untuk menyimpan sebagai draft.
-    * Post job baru Anda sekarang akan ditampilkan di halaman "Jobs" dan bidang tambahan yang Anda tambahkan akan muncul di dalam post tersebut.
-    * Anda dapat menambahkan post job baru dengan cara yang sama seperti menambahkan post lainnya di WordPress. Namun, mereka juga harus mengisi bidang tambahan yang telah ditambahkan menggunakan plugin ACF agar post job dapat ditampilkan secara lengkap di situs.
+    * Anda dapat menambahkan post job baru dengan cara yang sama seperti menambahkan post lainnya di WordPress. Namun, Anda juga harus mengisi bidang tambahan yang telah ditambahkan menggunakan plugin ACF agar post job dapat ditampilkan secara lengkap di situs.
 ## Preview Tampilan Website
 ### Homepage
 ![homepage](https://user-images.githubusercontent.com/82860149/227062669-ec1ae48e-ff95-4b09-a74d-9df0f7260eed.png)
