@@ -3,7 +3,6 @@
 ![Project Version](https://img.shields.io/badge/version-1.1-informational)
 ## Deskripsi
 Magang project magang PT Sultan Langit Teknologi Nusantara membuat website job portal berbasis theme wordpress. Menggunakan HTML, CSS, JQuery, Bootstrap, dan PHP pada tahap pembuatannya. Theme ini bersifat *open-source*  yang artinya Anda dapat menggunakan, memodifikasi, dan mendistribusikan kode sumber dengan bebas, tetapi tidak untuk tujuan komersial.
-Homepage Preview
 ## Instalasi & Penggunaan
 Perlu diperhatikan bahwasannya untuk menggunakan theme-nya, Anda bisa melakukannya dengan mendownload repository ini, dan pastikan file theme yang diupload dan diiinstal di wordpress nantinya adalah ekstensi zip, bukan rar.
 1. Upload Theme
