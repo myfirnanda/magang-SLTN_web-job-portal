@@ -5,7 +5,7 @@ $homepageJobs = new WP_Query(array(
     'meta_key' => 'job_date',
     'orderby' => 'meta_value',
     'order' => 'DESC',
-)); 
+));
 ?>
 
 <?php get_header(); ?>
@@ -34,7 +34,7 @@ $homepageJobs = new WP_Query(array(
 <!-- ----- Categories ----- -->
 <section class="categories xtra-p bg" id="categories">
     <div class="container">
-        <h2 class="text-dark text-center fw-bold mb-5 h1">Telusuri <span class="text-primary">Pekerjaan</span><br>Berdasarkan Kategori</h2>
+        <h2 class="text-dark text-center fw-bold mb-5 h1" id="categories-title">Telusuri <span class="text-primary">Pekerjaan</span><br>Berdasarkan Kategori</h2>
         <div class="row g-3">
             <div class="categories-item col-xs-6 col-sm-3">
                 <div class="categories-item bg-white p-4 rounded">
@@ -100,7 +100,7 @@ $homepageJobs = new WP_Query(array(
 <section class="about container-xxl py-5">
     <div class="container">
         <div class="row g-5 align-items-center">
-            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" id="about-img">
                 <div class="row g-0 about-bg rounded overflow-hidden">
                     <div class="col-6 text-start">
                         <img class="img-fluid w-100" src="<?= get_theme_file_uri('./assets/images/about/about-1.jpg') ?>">
@@ -117,12 +117,14 @@ $homepageJobs = new WP_Query(array(
                 </div>
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                <h1 class="mb-4 fw-bold">Wujudkan <span class="text-primary">Potensi Anda</span> dengan Portal Kerja Kami</h1>
-                <p class="mb-4">Kami adalah website job portal yang membantu Anda mencari pekerjaan dengan mudah dan efisien. Kami menawarkan berbagai manfaat untuk membantu Anda mencari pekerjaan impian Anda.</p>
-                <p><i class="fa fa-check text-primary me-3"></i>Pencarian pekerjaan yang lebih mudah dan cepat</p>
-                <p><i class="fa fa-check text-primary me-3"></i>Informasi pekerjaan terbaru dan terpercaya</p>
-                <p><i class="fa fa-check text-primary me-3"></i>Dukungan dan saran dari para ahli di industri</p>
-                <a class="btn btn-primary py-2 px-3 mt-3" href="<?php echo site_url('/tentang-kami'); ?>">Selengkapnya</a>
+                <h1 class="mb-4 fw-bold" id="about-title">Wujudkan <span class="text-primary">Potensi Anda</span> dengan Portal Kerja Kami</h1>
+                <p class="mb-4" id="about-desc">Kami adalah website job portal yang membantu Anda mencari pekerjaan dengan mudah dan efisien. Kami menawarkan berbagai manfaat untuk membantu Anda mencari pekerjaan impian Anda.</p>
+                <div id="about-text">
+                    <p><i class="fa fa-check text-primary me-3"></i>Pencarian pekerjaan yang lebih mudah dan cepat</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>Informasi pekerjaan terbaru dan terpercaya</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>Dukungan dan saran dari para ahli di industri</p>
+                </div>
+                <a class="btn btn-primary py-2 px-3 mt-3" href="<?php echo site_url('/tentang-kami'); ?>" id="about-button">Selengkapnya</a>
             </div>
         </div>
     </div>
@@ -135,9 +137,9 @@ $homepageJobs = new WP_Query(array(
         <div class="row d-flex align-items-center">
             <div class="col-sm-6 col-xs-12">
                 <div class="text-box">
-                    <h4 class="h1 fw-bold">Temukan <span class="text-primary">Pekerjaan</span> dengan<br>3 Langkah
+                    <h4 class="h1 fw-bold" id="step-guide-title">Temukan <span class="text-primary">Pekerjaan</span> dengan<br>3 Langkah
                         Mudah</h4>
-                    <p class="text-secondary">Cukup dengan 3 langkah saja, Anda bisa menentukan pekerjaan impian
+                    <p class="text-secondary" id="step-guide-desc">Cukup dengan 3 langkah saja, Anda bisa menentukan pekerjaan impian
                         Anda dari perusahaan ternama.</p>
                     <ol class="steps">
                         <li>
@@ -158,7 +160,7 @@ $homepageJobs = new WP_Query(array(
                     </ol>
                 </div>
             </div>
-            <div class="col-sm-6 col-xs-12">
+            <div class="col-sm-6 col-xs-12" id="step-guide-img">
                 <div class="img-box">
                     <img src="<?= get_theme_file_uri('./assets/images/step.png') ?>" alt="">
                 </div>
@@ -172,62 +174,62 @@ $homepageJobs = new WP_Query(array(
 <section class="job-list xtra-p" id="job-list">
     <div class="container">
         <div class="py-3 text-center">
-            <h3 class="h1 fw-bold">Temukan <span class="text-primary">Pekerjaan</span> Impian Anda</h3>
-            <p class="text-secondary">Jelajahi pekerjaan sesuai bidang Anda dan mulai melamar.</p>
+            <h3 class="h1 fw-bold" id="job-list-title">Temukan <span class="text-primary">Pekerjaan</span> Impian Anda</h3>
+            <p class="text-secondary" id="job-list-desc">Jelajahi pekerjaan sesuai bidang Anda dan mulai melamar.</p>
         </div>
-        <div class="job-container row g-4">
-            <?php while( $homepageJobs->have_posts() ) {
-            $homepageJobs->the_post(); ?>
-            <div class="col-xs-6 col-sm-3">
-                <div class="job-item px-4 py-3 rounded shadow d-flex justify-content-around flex-column" style="height: 340px;">
-                    <div class="mb-1">
-                        <div class="company d-flex align-items-center mb-3">
-                            <div class="img-box bg-light">
-                            <?php 
-                            $image = get_field('company_logo');
-                            if( !empty( $image ) ): ?>
-                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="40" height="40"/>
-                            <?php endif; ?>
+        <div class="job-container row g-4" id="job-list">
+            <?php while ($homepageJobs->have_posts()) {
+                $homepageJobs->the_post(); ?>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="job-item px-4 py-3 rounded shadow d-flex justify-content-around flex-column" style="height: 340px;">
+                        <div class="mb-1">
+                            <div class="company d-flex align-items-center mb-3">
+                                <div class="img-box bg-light">
+                                    <?php
+                                    $image = get_field('company_logo');
+                                    if (!empty($image)) : ?>
+                                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="40" height="40" />
+                                    <?php endif; ?>
+                                </div>
+                                <div class="company-desc">
+                                    <h6 class="fw-bold"><a href="<?php the_permalink() ?>" class="text-dark text-decoration-none"><?php echo get_field('company_name'); ?></a></h6>
+                                </div>
                             </div>
-                            <div class="company-desc">
-                                <h6 class="fw-bold"><a href="<?php the_permalink() ?>" class="text-dark text-decoration-none"><?php echo get_field('company_name'); ?></a></h6>
-                            </div>
-                        </div>
-                        <?php
-                        $jobType = get_field('job_type');
-                        $id = '';
+                            <?php
+                            $jobType = get_field('job_type');
+                            $id = '';
 
-                        if ($jobType == 'Full-time') {
-                            $id = 'bg-fulltime';
-                        } else if ($jobType == 'Part-time') {
-                            $id = 'bg-parttime';
-                        } else if ($jobType == 'Magang') {
-                            $id = 'bg-magang';
-                        } else if ($jobType == 'Freelance') {
-                            $id = 'bg-freelance';
-                        }
-                        ?>
-                        <span class="job-type py-1 px-2 rounded-3" id="<?= $id; ?>"><?= $jobType; ?></span>
-                        <div class="job-title mt-2">
-                            <h5 class="title m-0"><a href="<?php the_permalink() ?>" class="text-decoration-none text-dark"><?php the_title() ?></a></h5>
+                            if ($jobType == 'Full-time') {
+                                $id = 'bg-fulltime';
+                            } else if ($jobType == 'Part-time') {
+                                $id = 'bg-parttime';
+                            } else if ($jobType == 'Magang') {
+                                $id = 'bg-magang';
+                            } else if ($jobType == 'Freelance') {
+                                $id = 'bg-freelance';
+                            }
+                            ?>
+                            <span class="job-type py-1 px-2 rounded-3" id="<?= $id; ?>"><?= $jobType; ?></span>
+                            <div class="job-title mt-2">
+                                <h5 class="title m-0"><a href="<?php the_permalink() ?>" class="text-decoration-none text-dark"><?php the_title() ?></a></h5>
+                            </div>
                         </div>
-                    </div>
-                    <span class="text-secondary"><?= get_field('job_city') ?></span>
-                    <div class="mt-1">
-                        <div class="content">
-                            <p class="desc"><?php echo get_field('job_desc') ?></p>
-                            <div class="cta d-flex justify-content-between align-items-center">
-                                <?php
+                        <span class="text-secondary"><?= get_field('job_city') ?></span>
+                        <div class="mt-1">
+                            <div class="content">
+                                <p class="desc"><?php echo get_field('job_desc') ?></p>
+                                <div class="cta d-flex justify-content-between align-items-center">
+                                    <?php
                                     $number = get_field('job_salary');
                                     $formatted_number = number_format($number, 0, ',', '.');
-                                ?>
-                                <span class="mt-1 fw-bold">Rp<?php echo $formatted_number; ?></span>
-                                <a class="btn btn-light text-primary hover-primary" href="one.html">Lamar</a>
+                                    ?>
+                                    <span class="mt-1 fw-bold">Rp<?php echo $formatted_number; ?></span>
+                                    <a class="btn btn-light text-primary hover-primary" href="one.html">Lamar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
             <?php } ?>
         </div>
     </div>
@@ -241,7 +243,7 @@ $homepageJobs = new WP_Query(array(
             <h3 class="fw-bold h1 fw-bold">Feedback <span class="text-primary">Positif </span><br>dari Para Pencari Kerja</h3>
             <p class="text-secondary">Baca testimonial dari para pengguna situs kami yang telah sukses menemukan pekerjaan impian mereka.</p>
         </div>
-        <div class="swiper feedback-container my-xtra pb-3">
+        <div class="swiper feedback-container my-xtra pb-3" id="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="d-flex flex-column justify-content-center align-items-center gap-3 py-3 bdrs-xtra mx-xtra shadow-lg">

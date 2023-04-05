@@ -51,6 +51,11 @@
         </div>
     </div>
 </footer>
-<?php  wp_footer(); ?>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="assets/js/script.js"></script>
+
+<?php wp_footer(); ?>
 </body>
+
 </html>
